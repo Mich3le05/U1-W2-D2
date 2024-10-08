@@ -3,34 +3,47 @@
 */
 let n1 = 10
 let n2 = 7
-let largest
+
 if (n1 > n2) {
-  largest = n1
+  console.log(n1 + ' è più grande di ' + n2)
+  console.log('il più grande è ' + n1)
 } else {
-  largest = n2
+  console.log(n2 + ' è più grande di ' + n1)
+  console.log('il più grande è ' + n2)
 }
-console.log(largest)
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 let number = 10
-if (number !== 8) {
+
+if (number !== 5) {
   console.log('not equal')
 }
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
-if (number % 5 === 0) {
+let number2 = 75
+
+if (number2 % 5 === 0) {
   console.log('divisibile per 5')
 }
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
-if (n1 === 8 || n2 === 8 || n1 + n2 === 8 || n1 - n2 === 8 || n2 - n1 === 8) {
-  console.log('numeri verificati')
+let x1 = 80
+let x2 = 8
+
+// se x1 è 8
+// se x2 è 8
+// se x1+x2 è 8
+// se x1-x2 è 8
+// se x2-x1 è 8
+
+if (x1 === 8 || x2 === 8 || x1 + x2 === 8 || x1 - x2 === 8 || x2 - x1 === 8) {
+  console.log('verificato')
 }
 
 /* ESERCIZIO 5
@@ -39,17 +52,28 @@ if (n1 === 8 || n2 === 8 || n1 + n2 === 8 || n1 - n2 === 8 || n2 - n1 === 8) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 let totalShoppingCart = 40
-let spedizione = 10
+const shippingCost = 10
+let totalToPay
+
 if (totalShoppingCart >= 50) {
-  console.log('spedizione gratuita')
+  totalToPay = totalShoppingCart
 } else {
-  console.log('costo spedizione' + spedizione)
+  totalToPay = totalShoppingCart + shippingCost
 }
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
+let totalShoppingCart2 = 40
+const shippingCost2 = 10
+let totalToPay2
+
+if (totalShoppingCart2 * 0.8 >= 50) {
+  totalToPay2 = totalShoppingCart2 * 0.8
+} else {
+  totalToPay2 = totalShoppingCart2 * 0.8 + shippingCost2
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -80,6 +104,7 @@ if (typeof n4 === 'number') {
 */
 
 if (n4 % 2 === 0) {
+  // non c'è resto nella divisione con due
   console.log('numero pari')
 } else {
   console.log('numero dispari')
@@ -127,20 +152,27 @@ delete me.lastName
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-delete me.skills.pop()
+me.skills.pop()
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
-let numbers = []
-for (let i = 0; i < 10; i++) {
-  numbers[i] = i + 1
-}
+const arr = []
+arr.push(1)
+arr.push(2)
+arr.push(3)
+arr.push(4)
+arr.push(5)
+arr.push(6)
+arr.push(7)
+arr.push(8)
+arr.push(9)
+arr.push(10)
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
-
-numbers[9] = 100
-console.log(numbers)
+arr.pop()
+arr.push(100)
+console.log(arr)
