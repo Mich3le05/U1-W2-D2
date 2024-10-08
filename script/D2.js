@@ -60,6 +60,7 @@ if (totalShoppingCart >= 50) {
 } else {
   totalToPay = totalShoppingCart + shippingCost
 }
+console.log('Totale da pagare:', totalToPay)
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -74,6 +75,7 @@ if (totalShoppingCart2 * 0.8 >= 50) {
 } else {
   totalToPay2 = totalShoppingCart2 * 0.8 + shippingCost2
 }
+console.log('Totale da pagare:', totalToPay2)
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -85,8 +87,26 @@ const n4 = 4
 const n7 = 7
 const n9 = 9
 
-if (n4 < n7 && n7 < n9) {
-  console.log(n4, n7, n9)
+if (n4 >= n7) {
+  if (n9 >= n4) {
+    console.log(n9, n4, n7)
+  } else {
+    if (n9 >= n7) {
+      console.log(n4, n9, n7)
+    } else {
+      console.log(n4, n7, n9)
+    }
+  }
+} else {
+  if (n9 >= n7) {
+    console.log(n9, n7, n4)
+  } else {
+    if (n9 >= n4) {
+      console.log(n7, n9, n4)
+    } else {
+      console.log(n7, n4, n9)
+    }
+  }
 }
 
 /* ESERCIZIO 8
@@ -141,18 +161,21 @@ const me = {
   skills: ['javascript', 'html', 'css'],
 }
 me.city = 'Toronto'
+console.log(me)
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
 delete me.lastName
+console.log(me)
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 me.skills.pop()
+console.log(me)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
@@ -169,10 +192,11 @@ arr.push(7)
 arr.push(8)
 arr.push(9)
 arr.push(10)
+console.log(arr)
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
-arr.pop()
-arr.push(100)
+
+arr[9] = 100
 console.log(arr)
